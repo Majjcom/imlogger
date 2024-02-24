@@ -1,7 +1,7 @@
 use chrono::{DateTime, Utc};
 use log::{Level, Log, Metadata, Record};
 
-pub use log::{debug, error, info, warn};
+pub use log::{debug, error, info, warn, LevelFilter};
 
 pub struct ImLogger;
 
