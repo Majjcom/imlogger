@@ -32,7 +32,7 @@ impl Log for ImLogger {
                 file = "";
             }
             println!(
-                "{} \x1B{}{}\x1B[0m {} {} - {}",
+                "{} \x1B{}{:<5}\x1B[0m {} {} - {}",
                 ts.format("%Y-%m-%dT%H:%M:%S%.3fZ"),
                 get_color(record.level()),
                 record.level(),
