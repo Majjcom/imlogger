@@ -1,4 +1,4 @@
-use chrono::{DateTime, Utc};
+use chrono::Local;
 use log::{Level, Log, Metadata, Record};
 
 pub use log::{debug, error, info, warn, LevelFilter};
@@ -21,7 +21,7 @@ impl Log for ImLogger {
     }
     fn log(&self, record: &Record) {
         if self.enabled(record.metadata()) {
-            let ts: DateTime<Utc> = Utc::now();
+            let ts = Local::now();
             let file: &str;
             #[cfg(debug_assertions)]
             {
