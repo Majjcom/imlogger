@@ -5,7 +5,7 @@ edition = "2021"
 description = "A Simple Logger for Rust"
 authors = ["Majjcom"]
 homepage = "https://github.com/Majjcom/imlogger"
-repository = "https://guthub.com/Majjcom/imlogger"
+repository = "https://github.com/Majjcom/imlogger"
 readme = "README.md"
 license-file = "LICENSE"
 
