@@ -1,7 +1,7 @@
 use chrono::Local;
 use log::{Level, Log, Metadata, Record};
 
-pub use log::{debug, error, info, warn, LevelFilter};
+pub use log::{debug, error, info, warn, trace, LevelFilter};
 
 pub struct ImLogger;
 
@@ -47,7 +47,7 @@ impl Log for ImLogger {
 
 static IMLOGGER: ImLogger = ImLogger {};
 
-pub fn imloginit(level: log::LevelFilter) {
+pub fn imloginit(level: LevelFilter) {
     log::set_logger(&IMLOGGER).unwrap();
     log::set_max_level(level);
 }
